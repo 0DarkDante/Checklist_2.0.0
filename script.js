@@ -12,7 +12,7 @@ input.addEventListener('keypress', function(event) {
 		
 		let remove = document.createElement('span');
 		remove.classList.add('remove');
-    remove.textContent = 'удалить';
+    remove.textContent = 'видалить';
     remove.addEventListener('click', function() {
       li.remove();
     });
@@ -20,7 +20,10 @@ input.addEventListener('keypress', function(event) {
 		
 		let mark = document.createElement('span');
 		mark.classList.add('mark');
-    mark.textContent = 'сделано';
+    mark.textContent = 'зроблено';
+    mark.addEventListener('click', function() {
+      task.classList.toggle('done');
+    });
 		li.appendChild(mark);
 		
 		list.appendChild(li);
