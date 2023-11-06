@@ -13,6 +13,9 @@ input.addEventListener('keypress', function(event) {
 		let remove = document.createElement('span');
 		remove.classList.add('remove');
     remove.textContent = 'удалить';
+    remove.addEventListener('click', function() {
+      li.remove();
+    });
 		li.appendChild(remove);
 		
 		let mark = document.createElement('span');
