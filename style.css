@@ -1,5 +1,9 @@
 body {
 	text-align: center;
+  background-image: url('/IMG/jacob-padilla-d_VFapMc2k4-unsplash.jpg');
+  background-size: cover; 
+  background-repeat: no-repeat; 
+  background-position: center center;
 }
 
 #container {
