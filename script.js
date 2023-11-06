@@ -8,6 +8,20 @@ input.addEventListener('keypress', function(event) {
 		let task = document.createElement('span');
     task.classList.add('task');
 		task.textContent = this.value;
+
+    task.addEventListener('dblclick', function() {
+      inputField = document.createElement('input');
+      inputField.value = task.textContent;
+
+      inputField.addEventListener('keypress', function(event) {
+        if (event.key == 'Enter') {
+          task.textContent = inputField.value;
+          li.replaceChild(task, inputField);
+        }
+      })
+      li.replaceChild(inputField, task);
+    });
+
 		li.appendChild(task);
 		
 		let remove = document.createElement('span');
